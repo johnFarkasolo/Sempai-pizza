@@ -1,9 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const Button = ({ className, outline, children }) => {
+const Button = ({ className, outline, children, onClick }) => {
   return (
-    <button
+    <button onClick={onClick}
       className={classNames('button', className, {
         'button--outline': outline,
       })}>
@@ -13,3 +13,4 @@ const Button = ({ className, outline, children }) => {
 };
 
 export default Button;
+

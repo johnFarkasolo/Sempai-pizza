@@ -24,8 +24,8 @@ function PizzaBlock({id, name, imageUrl, price, types, sizes, onClickAddPizza, a
                 name,
                 imageUrl,
                 price,
-                size: availableTypes[activeType],
-                type: availableSizes[activeSize]
+                size: availableSizes[activeSize],
+                type: availableTypes[activeType]
         };
         onClickAddPizza(obj)
     }
@@ -66,6 +66,7 @@ function PizzaBlock({id, name, imageUrl, price, types, sizes, onClickAddPizza, a
                 <Button
                     className="button--add"
                     outline
+                    onClick={onAddPizza}
                 >
                     <svg
                         width="12"
@@ -78,7 +79,7 @@ function PizzaBlock({id, name, imageUrl, price, types, sizes, onClickAddPizza, a
                             fill="white"
                         />
                     </svg>
-                    <span onClick={onAddPizza}>Добавить</span>
+                    <span >Добавить</span>
                     {addedCount && <i>{addedCount}</i>}
                 </Button>
             </div>
